@@ -1,0 +1,4 @@
+1.
++ ./SAM.pdb: `python ./get_SAM.py`
++ SAM_addH.pdb: ./run_reduce.sh SAM
++ SAM_addH_gau.pdb: from gv
