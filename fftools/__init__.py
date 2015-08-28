@@ -8,7 +8,7 @@ import numpy as np
 def load_file(*args, **kwd):
     p_struct = pmd.load_file(*args, **kwd)
 
-    new_struct = Structure2()
+    new_struct = Structure()
     new_struct.atoms = p_struct.atoms
     new_struct.residues = p_struct.residues
     new_struct.bonds = p_struct.bonds
@@ -19,13 +19,13 @@ def load_file(*args, **kwd):
     new_struct.impropers = p_struct.impropers
     new_struct.cmaps = p_struct.cmaps
     new_struct.trigonal_angles = p_struct.trigonal_angles
-    #new_struct.out_of_plane_bends = []
-    #new_struct.pi_torsions = []
-    #new_struct.stretch_bends = []
-    #new_struct.torsion_torsions = []
-    #new_struct.chiral_frames = []
-    #new_struct.multipole_frames = []
-    #new_struct.adjusts = []
+    new_struct.out_of_plane_bends = p_struct.out_of_plane_bends
+    new_struct.pi_torsions = p_struct.pi_torsions
+    new_struct.stretch_bends = p_struct.stretch_bends
+    new_struct.torsion_torsions = p_struct.torsion_torsions
+    new_struct.chiral_frames = p_struct.chiral_frames
+    new_struct.multipole_frames = p_struct.multipole_frames
+    new_struct.adjusts = p_struct.adjusts
     new_struct.acceptors = p_struct.acceptors
     new_struct.donors = p_struct.donors
 
